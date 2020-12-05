@@ -86,13 +86,13 @@ while True:
         pass
     elif previous_price < float(price):
         up = colored("[+] "+crypto_name+" price is: "+str(price)+" "+currency,'green')
-        print(timer, up, new_change, colored("since the last hour.",'green'),colored("Balance: "+str(current_balance)+currency,'yellow'))
+        print(timer, up, new_change, colored("since the last hour.",'green'),colored("Balance: "+str(current_balance)+" "+currency,'yellow'))
         previous_price = float(price)
         previous_change = float(change)
 
     elif previous_price > float(price):
         down = colored("[-] "+crypto_name+" price is: "+str(price)+" "+currency,'red')
-        print(timer, down, new_change, colored("since the last hour.",'red'),colored("Balance: £"+str(current_balance),'yellow'))
+        print(timer, down, new_change, colored("since the last hour.",'red'),colored("Balance: "+str(current_balance)+" "+currency,'yellow'))
         previous_price = float(price)
         previous_change = float(change)
     else:
