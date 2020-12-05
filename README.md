@@ -40,8 +40,6 @@ python3 monitor.py
 * 0.1.0 - First release
 ## Meta
 
-Social – [@null0048](https://twitter.com/null0048)
-
 Distributed under the [AGPL-3.0](https://github.com/rootsh3l1/coinbase-api-monitor/blob/main/LICENSE) license. See ``LICENSE`` for more information.
 
 [https://github.com/rootsh3l1/coinbase-api-monitor](https://github.com/rootsh3l1)
