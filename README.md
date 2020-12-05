@@ -22,9 +22,9 @@ Windows:
 Coming soon...
 ```
 
-## Usage example
+## Usage
 
-Once you run the program, you'll get chose from the available cryptocurrencies, you will then enter the amount of coins you have so you can track your current balance, and finally enter the refresh rate you prefer (personally recommend 10s to avoid any sort of rate-limit/ban).
+Once you run the program, you'll get choose from the available cryptocurrencies, you will then enter the amount of coins you have so you can track your current balance, and finally enter the refresh rate you prefer (personally recommend 10s to avoid any sort of rate-limit/ban).
 
 
 ## Deployment setup
