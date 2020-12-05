@@ -29,8 +29,6 @@ Once you run the program, you'll get chose from the available cryptocurrencies, 
 
 ## Deployment setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
 ```sh
 pip3 install -r requirements.txt
 python3 monitor.py
