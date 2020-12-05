@@ -27,7 +27,7 @@ Coming soon...
 Once you run the program, you'll get chose from the available cryptocurrencies, you will then enter the amount of coins you have so you can track your current balance, and finally enter the refresh rate you prefer (personally recommend 10s to avoid any sort of rate-limit/ban).
 
 
-## Development setup
+## Deployment setup
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
