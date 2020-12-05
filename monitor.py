@@ -52,14 +52,17 @@ currency = input("Currency (EUR/USD/GBP): ")
 
 previous_price = 0.0
 previous_change = 0.0
-# tmp = sp.call('clear', shell=True)
+tmp = sp.call('clear', shell=True) #clear terminal
 
 while True:
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
     timer = colored("["+current_time+"]",'white')
     user_agent = random.choice(user_agent_list)
-    headers={'User-Agent' : user_agent, 'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Accept-Encoding' : 'gzip, deflate, br', 'Accept-Language' : 'en-GB,en-US;q=0.9,en;q=0.8'}
+    headers={'User-Agent' : user_agent, 
+             'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 
+             'Accept-Encoding' : 'gzip, deflate, br', 
+             'Accept-Language' : 'en-GB,en-US;q=0.9,en;q=0.8'}
     session1 = requests.Session()
     r1 = session1.get("https://www.coinbase.com/api/v2/assets/prices?base="+currency+"&filter=listed&resolution=latest", headers=headers)
     json_data = json.loads(r1.text)
@@ -69,14 +72,15 @@ while True:
     currency = json_data['data'][crypto_choice]['currency']
     price = json_data['data'][crypto_choice]['prices']['latest']
     change = json_data['data'][crypto_choice]['prices']['latest_price']['percent_change']['hour']
-    current_balance = round(((float(price) * crypto_amount)/1),5)
+    current_balance = round(((float(price) * crypto_amount)/1),5) #calculate current balance
         
-
+    #check market status
     if float(change) >= 0.0:
         new_change = colored("Market is up by "+str(round(change,10))+"%",'green')
     else:
         new_change = colored("Market down by "+str(round(change,10))+"%",'red')
 
+    #check price status
     if previous_price == float(price):
         # print("[*] Same price", price)
         pass
@@ -95,8 +99,6 @@ while True:
         pass
 
     time.sleep(delay)
-    # print(crypto_name, "price is:", str(price), currency , "and it changed by", change, "in the last hour.")
-
 
 
 
