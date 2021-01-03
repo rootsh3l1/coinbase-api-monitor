@@ -8,6 +8,9 @@ Simple cryptocurrency price monitor written in python using the Coinbase API.
 
 ![](unknown.png)
 
+You can find the app ported in GOlang with a very cool TUI [here](https://github.com/Polliog/cryptocurrency-monitor).
+<br>\- Credits to my mate Polliog :)
+
 ## Installation
 
 OS X & Linux:
